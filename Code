@@ -1,0 +1,52 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+/******************************************************************************/
+#include <iostream>
+using namespace std;
+double getAmountSold()
+{
+    double amount;
+    cout<<"Amount sold by salesman:";
+    cin>>amount;
+    return amount;
+}
+void CalcCommision(double &commision_1,double amount)
+{
+    commision_1=(15*amount)/100;
+    
+}
+void DisplayCommision(double commision)
+{
+    cout<<"commision of department(IT):"<<commision<<endl;
+}
+void CalcTotalCommision(double &commision_2,double nodept)
+{
+    double totalCommision;
+    totalCommision=nodept*commision_2;
+    cout<<"Total Commision(All departmen):"<<totalCommision;
+}
+
+int main()
+{
+    double commision=0;
+    double amount_1=0;
+    double nodept;
+    amount_1=getAmountSold();
+
+    CalcCommision(commision,amount_1);
+    DisplayCommision(commision);
+    cout<<"Total no of departmen:";
+    cin>>nodept;
+    CalcTotalCommision(commision,nodept);
+    
+
+    return 0;
+}
+
+
